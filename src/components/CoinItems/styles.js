@@ -10,22 +10,25 @@ const Styles = StyleSheet.create({
         marginRight: 7
     },
     dataContainer: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
         padding: 15,
 
     },
     priceContainer: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
         padding: 15,
-        marginLeft: 'auto'
+        marginLeft: 'auto',
+        alignItems: 'flex-end'
     },
     rankingContainer: {
         fontWeight: 'bold',
         marginRight: 5,
-        backgroundColor: 'grey',
+        backgroundColor: '#282828',
         paddingHorizontal: 3,
-        borderRadius: 5
+        borderRadius: 5,
     },
+    priceTitle :{
+        fontSize: 20,
+        fontWeight: 'bold',
+    }
 
 });
 

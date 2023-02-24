@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
 import React from 'react';
-import CoinItems from './src/components/CoinItems'
+
+import HookEffect from './src/screens/SocketUse';
 
 const App = () => {
+  
   return (
     <View style={styles.container}>
-        <CoinItems />
-        <StatusBar style="auto" />
+      
+      <HookEffect />
+      {/* <SocketUse /> */}
+      <StatusBar style="auto" />
     </View>
   );
 }
