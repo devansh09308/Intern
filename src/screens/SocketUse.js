@@ -6,7 +6,7 @@ const SocketUSe = () => {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        const ws = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin')
+        const ws = new WebSocket('wss://ws.coincap.io/prices?assets=ALL')
         ws.onopen = () => {
             // connection opened
             ws.send('something'); // send a message
@@ -15,7 +15,19 @@ const SocketUSe = () => {
         ws.onmessage = e => {
             // a message was received
             console.log(e.data);
-            setCoins(e.data)
+            const response = JSON.parse(e.data);
+            let arr = [];
+            const keys = Object.keys(obj)
+            for (let i = 0; i < keys.length; i++) {
+                let temp = {}
+                let key = keys[i]
+                let value = obj[key]
+                temp['bitcoin_name'] = key
+                temp['bitcoin_price'] = value
+                arr.push(temp)
+            }
+            console.log(response);
+            
         };
         
         ws.onerror = e => {

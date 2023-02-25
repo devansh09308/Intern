@@ -4,8 +4,6 @@ import {Text, View } from 'react-native';
 import Styles from './styles';
 
 const CoinItems = ({ marketCoin }) => {
-    console.log('marketCoin');
-    console.log(marketCoin);
     const {name, priceUsd} = marketCoin;
 
     return(

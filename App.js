@@ -2,7 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
 import React from 'react';
 
-import HookEffect from './src/screens/SocketUse';
+// import SocketUse from './src/screens/SocketUse';
+import HookEffect from './src/screens/HookEffect';
 
 const App = () => {
   
